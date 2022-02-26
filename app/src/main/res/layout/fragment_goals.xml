@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#181B29"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/textLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Goals"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Set goals and stick to it."
+            android:textColor="#D6D6D6"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLayout"
+        android:backgroundTint="#23273A"
+        android:elevation="10dp"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/goalNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg3"
+                android:hint="Set goal name"
+                android:inputType="text"
+                android:lines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/goalDateEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg3"
+                android:hint="Set date"
+                android:inputType="date"
+                android:lines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/goalStepsEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg3"
+                android:hint="Enter Steps"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/goalDateTv"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="Set goal date"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textColorHint="#C5C5C5"-->
+            <!--                android:inputType="date"-->
+            <!--                android:textSize="17sp"-->
+            <!--                android:lines="1"-->
+            <!--                android:background="@drawable/button_bg3"-->
+            <!--                android:padding="12dp"/>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginStart="5dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Select steps: "-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="17sp"/>-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/goalsTv"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="0"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="17sp" />-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <SeekBar-->
+            <!--                android:id="@+id/goalsSeekBar"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:max="10000"-->
+            <!--                android:thumb="@drawable/custom_thumb"-->
+            <!--                android:progressDrawable="@drawable/custom_seekbar"/>-->
+
+            <TextView
+                android:id="@+id/goalsOkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ok_button_bg"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="1dp"
+                android:text="OK"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

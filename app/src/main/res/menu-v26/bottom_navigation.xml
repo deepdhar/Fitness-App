@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_goals"
+        android:icon="@drawable/ic_goals"
+        android:title="Goals"
+        android:iconTint="@color/white"/>
+
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:iconTint="@color/white"/>
+
+    <item android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history"
+        android:title="History"
+        android:iconTint="@color/white"/>
+
+</menu>
