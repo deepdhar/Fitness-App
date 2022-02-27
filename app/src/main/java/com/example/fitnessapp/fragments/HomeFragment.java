@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fitnessapp.Entity.GoalDatabaseClass;
+import com.example.fitnessapp.utils.GoalDatabaseClass;
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.adapter.GoalsAdapter;
 
@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
         circleProgressBar.setProgress(0);
         completedPercentTv.setText("0%");
 
+
         okButtonTv.setOnClickListener(view1 -> {
             if (!enterStepsEditText.getText().toString().matches("") && !todaysGoalTv.getText().toString().matches("0")) {
                 stepsCompletedTv.setText(enterStepsEditText.getText().toString().trim());
@@ -68,11 +69,6 @@ public class HomeFragment extends Fragment {
 
                 enterStepsEditText.setText("");
                 enterStepsEditText.clearFocus();
-
-//                HomeDatabaseClass myDb = new HomeDatabaseClass(getContext());
-//                myDb.addHomeData(stepsCompleted,
-//                        Integer.parseInt(todaysGoalTv.getText().toString()),
-//                        Integer.parseInt(String.valueOf(completedPercent)));
 
             } else if(todaysGoalTv.getText().toString().matches("0")) {
                 Toast.makeText(getContext(), "select a goal first", Toast.LENGTH_SHORT).show();
@@ -103,7 +99,7 @@ public class HomeFragment extends Fragment {
     void storeDataInArrays() {
         Cursor cursor = myDb.readAllData();
         if(cursor.getCount() == 0) {
-            Toast.makeText(getContext(), "no data.", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), "no data.", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 goal_id.add(cursor.getString(0));
@@ -125,25 +121,4 @@ public class HomeFragment extends Fragment {
         }
     }
 
-//    @Override
-//    public void onDestroy() {
-//        destroyFlag = 1;
-//        super.onDestroy();
-//    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-//        HomeDatabaseClass myDb = new HomeDatabaseClass(getContext());
-//        Cursor cursor = myDb.readAllDataHome();
-//        if (cursor.getCount() == 0) {
-//            Toast.makeText(getContext(), "no data.", Toast.LENGTH_SHORT).show();
-//        } else {
-//            while (cursor.moveToNext()) {
-//                stepsCompletedTv.setText(cursor.getString(1));
-//                todaysGoalTv.setText(cursor.getString(2));
-//                completedPercentTv.setText(cursor.getString(3) + "%");
-//            }
-//        }
-    }
 }

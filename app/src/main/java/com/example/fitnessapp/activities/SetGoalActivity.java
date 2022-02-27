@@ -5,13 +5,12 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.fitnessapp.Entity.HistoryDatabaseClass;
+import com.example.fitnessapp.utils.GoalDatabaseClass;
+import com.example.fitnessapp.utils.HistoryDatabaseClass;
 import com.example.fitnessapp.R;
-import com.example.fitnessapp.fragments.HomeFragment;
 
 public class SetGoalActivity extends AppCompatActivity {
 
@@ -40,6 +39,9 @@ public class SetGoalActivity extends AppCompatActivity {
             myDb.addHistory(goalName.getText().toString(),
                     goalDate.getText().toString(),
                     Integer.parseInt(goalSteps.getText().toString()));
+
+            GoalDatabaseClass goalDb = new GoalDatabaseClass(this);
+            goalDb.deleteOneRow(name);
 
             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
             intent.putExtra("steps", String.valueOf(goalSteps.getText()));

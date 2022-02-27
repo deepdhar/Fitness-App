@@ -13,9 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fitnessapp.Entity.HistoryDatabaseClass;
+import com.example.fitnessapp.utils.HistoryDatabaseClass;
 import com.example.fitnessapp.R;
-import com.example.fitnessapp.adapter.GoalsAdapter;
 import com.example.fitnessapp.adapter.HistoryAdapter;
 
 import java.util.ArrayList;
@@ -55,7 +54,7 @@ public class HistoryFragment extends Fragment {
     private void storeDataInArrays() {
         Cursor cursor = myDb.readAllDataHistory();
         if(cursor.getCount()==0) {
-            Toast.makeText(getContext(), "no data.", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), "no data.", Toast.LENGTH_SHORT).show();
         } else {
             while (cursor.moveToNext()) {
                 goal_id_history.add(cursor.getString(0));

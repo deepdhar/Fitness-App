@@ -45,44 +45,6 @@
 
     </RelativeLayout>
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/stepsCard"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:backgroundTint="#23273A"-->
-<!--        android:elevation="12dp"-->
-<!--        app:cardCornerRadius="4dp">-->
-
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="18dp">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:text="Step distance in km"-->
-<!--                android:textColor="#CFCFCF"-->
-<!--                android:textSize="17sp" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/stepsInKmTv"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:text="2.99"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="22sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--        </RelativeLayout>-->
-
-<!--    </androidx.cardview.widget.CardView>-->
-
     <androidx.cardview.widget.CardView
         android:id="@+id/enterStepsCard"
         android:layout_width="match_parent"
@@ -147,7 +109,7 @@
             android:layout_height="wrap_content"
             android:text="Today's goal: "
             android:textColor="@color/white"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/todaysGoalTv"
@@ -155,14 +117,14 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" steps"
             android:textColor="@color/white"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -179,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="18sp"
             android:text="Completed: "/>
 
         <TextView
@@ -187,7 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="18sp"
             android:text="0%"/>
 
     </LinearLayout>
