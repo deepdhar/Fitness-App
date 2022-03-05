@@ -68,9 +68,24 @@ public class GoalDatabaseClass extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public void deleteOneRow(String row_name) {
+    public void updateData(String row_id, String row_name, String row_date, String row_steps) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.delete(TABLE_NAME, "goal_name=?", new String[]{row_name});
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_NAME, row_name);
+        cv.put(COLUMN_DATE, row_date);
+        cv.put(COLUMN_STEPS, row_steps);
+
+        long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
+        if(result==-1) {
+            Toast.makeText(context, "failed to update!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "updated!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void deleteOneRow(String row_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
 
 //        if(result==-1) {
 //            Toast.makeText(context, "failed to delete!", Toast.LENGTH_SHORT).show();

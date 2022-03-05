@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,17 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.activities.SetGoalActivity;
+import com.example.fitnessapp.utils.GoalDatabaseClass;
 
 import java.util.ArrayList;
 
-// updated 22.02.22
 public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> {
 
     private Context context;
     private ArrayList goal_id, goal_name, goal_date, goal_steps;
 
     int position;
-    public static int stepsInt = 0;
 
     public GoalsAdapter(Context context, ArrayList goal_id, ArrayList goal_name, ArrayList goal_date, ArrayList goal_steps) {
         this.context = context;
@@ -52,6 +52,7 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
         //when a goal card is selected, it opens up for confirmation
         holder.cardView.setOnClickListener(view -> {
             Intent intent = new Intent(context, SetGoalActivity.class);
+            intent.putExtra("goalId", String.valueOf(goal_id.get(position)));
             intent.putExtra("goalName", String.valueOf(goal_name.get(position)));
             intent.putExtra("goalDate", String.valueOf(goal_date.get(position)));
             intent.putExtra("goalSteps", String.valueOf(goal_steps.get(position)));

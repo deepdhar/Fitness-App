@@ -30,12 +30,13 @@
             android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Morning Walk"
-            android:textSize="18sp"
             android:layout_below="@id/item_date"
-            android:textColor="@color/white"/>
+            android:text="Morning Walk"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutSteps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

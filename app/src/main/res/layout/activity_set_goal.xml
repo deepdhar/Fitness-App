@@ -18,15 +18,74 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="18dp"/>
 
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/itemCardLayout2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:backgroundTint="#23273A"-->
+<!--        android:elevation="10dp"-->
+<!--        app:cardCornerRadius="4dp"-->
+<!--        android:layout_marginBottom="10dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/item_date2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="23.11.2021"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/white"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/item_name2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Morning Walk"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginTop="5dp"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_gravity="center">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/item_steps2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="5000"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:fontFamily="sans-serif-medium"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=" steps"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="19sp"/>-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/itemCardLayout2"
+        android:id="@+id/setGoal_cardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:backgroundTint="#23273A"
         android:elevation="10dp"
-        app:cardCornerRadius="4dp"
-        android:layout_marginBottom="10dp">
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,56 +93,84 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
-                android:id="@+id/item_date2"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/goalNameEt2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="23.11.2021"
-                android:textSize="15sp"
-                android:textColor="@color/white"/>
-
-            <TextView
-                android:id="@+id/item_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Morning Walk"
-                android:textSize="17sp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg3"
+                android:hint="Set goal name"
+                android:inputType="text"
+                android:lines="1"
+                android:padding="12dp"
                 android:textColor="@color/white"
-                android:layout_marginTop="5dp"/>
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/goalDateEt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg3"
+                android:hint="Set date"
+                android:inputType="date"
+                android:lines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/goalStepsEt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg3"
+                android:hint="Enter Steps"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C5C5"
+                android:textSize="17sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center">
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal">
+
                 <TextView
-                    android:id="@+id/item_steps2"
+                    android:id="@+id/setGoal_updateButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5000"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:fontFamily="sans-serif-medium"/>
+                    android:background="@drawable/ok_button_bg"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Update"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
                 <TextView
+                    android:id="@+id/setGoal_deleteButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" steps"
-                    android:textColor="@color/white"
-                    android:textSize="19sp"/>
+                    android:background="@drawable/ok_button_bg"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="4dp"
+                    android:text="Delete"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
             </LinearLayout>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-<!--    <Button-->
-<!--        android:id="@+id/setButtonTv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/itemCardLayout2"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:text="Set Goal" />-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/setButtonTv"
